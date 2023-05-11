@@ -108,6 +108,7 @@ def deleteDebugData():
         debugDelete = "DELETE FROM managerInfo WHERE member_ID = 4564"
         cursor.execute(debugDelete)
         
+        ##commit change to database
         conn.commit()
         
     except Error as e:
