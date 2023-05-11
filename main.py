@@ -32,6 +32,10 @@ def createTableManInfo():
         if cnn:
             cnn.close()
             
+if __name__ == '__main__':
+    createTableManInfo()
+    
+            
 
  
 
