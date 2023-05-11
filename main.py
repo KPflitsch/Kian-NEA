@@ -96,6 +96,26 @@ def insertDataManInfo():
     finally:
         if conn:
             conn.close()
+
+##Use this to delete data from a table
+def deleteDebugData():
+    try:
+        ##connecting the database and creating a cursor
+        conn = sqlite3.connect(filename)
+        cursor = conn.cursor()
+        
+        ##Modify this line to change what table to delete from and what data
+        debugDelete = "DELETE FROM managerInfo WHERE member_ID = 4564"
+        cursor.execute(debugDelete)
+        
+        conn.commit()
+        
+    except Error as e:
+        print(e)
+        
+    finally:
+        if conn:
+            conn.close()
     
             
 if __name__ == '__main__':
@@ -103,6 +123,9 @@ if __name__ == '__main__':
     create_connection(r"C:\Users\KianP\Desktop\Kian NEA\Database.db")
     createTableManInfo()
     insertDataManInfo()
+    
+    ##Uncomment this to use (explained above)
+    ##deleteDebugData()
     
             
 
