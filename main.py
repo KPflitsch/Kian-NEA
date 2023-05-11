@@ -66,6 +66,8 @@ def insertDataManInfo():
         ##simple bool for the use of confirming email
         emailGood = False
         
+        member_ID = input("Enter your uniqe employee ID: ")
+        
         ##asking for inputs of data
         name = input("Enter full name: ")
         
