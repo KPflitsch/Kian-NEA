@@ -33,7 +33,7 @@ def createTableManInfo():
             print("Database connected")
             
             ##cursor is needed to create/modify/insert in a database
-            cursor = cnn.cursor()
+            cursor = conn.cursor()
             ##running sql file
             cursor.executescript(sql)
             ##commiting changes to the database
