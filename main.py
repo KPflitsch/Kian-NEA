@@ -80,7 +80,7 @@ def insertDataManInfo():
             else:
                 print("Email adressed do not match")
         
-        hourRate = int(input("Input your hourly rate: "))
+        hourRate = float(input("Input your hourly rate: "))
         
         ##Inserting the inputs into the database
         cursor.execute("INSTERT INTO managerInfo(member_ID, name, email, hourRate) VALUES (?,?,?,?)")
